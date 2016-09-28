@@ -33,6 +33,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
+#Open GAPPS
+GAPPS_VARIANT := nano
+
 # Device Init
 PRODUCT_PACKAGES += \
     init.recovery.suzuran \
@@ -76,3 +79,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/kitakami/platform.mk)
 $(call inherit-product, vendor/sony/kitakami-suzuran/suzuran-vendor.mk)
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
